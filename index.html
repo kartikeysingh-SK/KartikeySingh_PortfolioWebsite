@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio Website of Kartikey Singh - Computer Science Student & Aspiring Software Developer. Built for IT4048 Version Control with Git and GitHub mini-project.">
+  <meta name="author" content="Kartikey Singh">
+  <meta name="keywords" content="Kartikey Singh, Portfolio, Web Developer, Computer Science, IT4048, Git, GitHub, JavaScript, HTML5, CSS3">
+  <title>Kartikey Singh | Personal Portfolio Website</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Favicon Icon (Vector SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%233b82f6'/><text x='50' y='64' font-size='46' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>KS</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header & Navigation
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar">
+      <a href="#home" class="brand-logo" aria-label="Kartikey Singh Home">
+        <span class="brand-icon">KS</span>
+        <span>Kartikey<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#git-workflow" class="nav-link">Git Workflow</a>
+        <a href="#resume" class="nav-link">Résumé</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Controls (Theme Toggle & Mobile Menu) -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+          <!-- Populated by script.js -->
+        </button>
+
+        <button id="hamburger-toggle" class="hamburger-btn" aria-label="Toggle Mobile Navigation" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         Hero Section
+         ======================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="status-badge">
+              <span class="pulse-dot"></span>
+              <span>Available for Technical Projects &amp; Collaborations</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Kartikey Singh</span>
+            </h1>
+
+            <p class="hero-tagline">
+              &lt;Computer Science Student | Aspiring Software Developer /&gt;
+            </p>
+
+            <p class="hero-description">
+              Passionate undergraduate engineering student focusing on full-stack web applications, systematic database architecture, and disciplined version control workflows. Welcome to my personal portfolio.
+            </p>
+
+            <!-- Academic & Profile Highlights -->
+            <div class="hero-meta-badges">
+              <span class="meta-pill">
+                <strong>Subject:</strong> IT4048 Version Control
+              </span>
+              <span class="meta-pill">
+                <strong>Enrollment:</strong> 202503103510392
+              </span>
+              <span class="meta-pill">
+                <strong>Location:</strong> Surat, Gujarat, India
+              </span>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary" id="btn-hero-projects">
+                <span>View My Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+
+              <a href="assets/resume/Kartikey_Singh_Resume.pdf" class="btn btn-secondary" download="Kartikey_Singh_Resume.pdf" id="btn-hero-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Résumé</span>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <span class="hero-socials-label">Connect:</span>
+              <a href="https://github.com/kartikeysingh-SK" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub Profile" title="GitHub Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="mailto:25amtics392@gmail.com" class="btn-icon" aria-label="Direct Email" title="Send Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn-icon" aria-label="Open Contact Form" title="Contact Me">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Developer Terminal Card -->
+          <div class="hero-visual-card">
+            <div class="code-window-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="window-title">kartikey_developer.json</span>
+            </div>
+
+            <div class="code-content">
+              <span class="code-line">{</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-prop">"developer"</span>: <span class="code-string">"Kartikey Singh"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-prop">"role"</span>: <span class="code-string">"Computer Science Engineer"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-prop">"course"</span>: <span class="code-string">"IT4048 - Version Control"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-prop">"primaryTech"</span>: [</span>
+              <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>, <span class="code-string">"JavaScript"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">"Git"</span>, <span class="code-string">"GitHub"</span>, <span class="code-string">"PHP / Node"</span></span>
+              <span class="code-line">&nbsp;&nbsp;],</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-prop">"status"</span>: <span class="code-string">"Building &amp; Learning"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;<span class="code-prop">"openToCollaborate"</span>: <span class="code-keyword">true</span></span>
+              <span class="code-line">}</span>
+            </div>
+
+            <div class="hero-stats-banner">
+              <div class="stat-item">
+                <h4>3+</h4>
+                <p>Projects</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Responsive</p>
+              </div>
+              <div class="stat-item">
+                <h4>Git</h4>
+                <p>Workflows</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         About Me Section
+         ======================================================================== -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Developer &amp; Student Profile</h2>
+          <p class="section-subtitle">
+            A student developer dedicated to software development fundamentals, web technologies, and clean version control.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Hello! I am <strong>Kartikey Singh</strong>, a Computer Science and Engineering undergraduate student at <em>Asha M. Tarsadia Institute of Computer Science and Technology</em>. My core interests lie in developing interactive web applications, architecting clean database interactions, and applying systematic software engineering methodologies.
+            </p>
+            <p>
+              Through this academic mini-project for <strong>IT4048: Version Control with Git and GitHub</strong>, I focus on demonstrating not only modern frontend UI/UX development with responsive web principles, but also disciplined version control practices—including structured semantic commits, clean branch management, and automated continuous deployment via GitHub Pages.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <h4>Full-Stack Exploration</h4>
+                <p>Experience building backend services and responsive client interfaces.</p>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+                </div>
+                <h4>Version Control</h4>
+                <p>Proficient in Git branching, clean commit logs, and GitHub repository hosting.</p>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h4>Responsive Design</h4>
+                <p>Mobile-first UI crafted with modern CSS custom properties and accessibility.</p>
+              </div>
+
+              <div class="highlight-card">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <h4>Continuous Learning</h4>
+                <p>Committed to learning modern web standards, software testing, and architecture.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Profile Box -->
+          <div class="academic-badge-box">
+            <div class="academic-header">
+              <div class="academic-header-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div>
+                <h3>Academic Profile</h3>
+                <p>Official Course &amp; Submission Data</p>
+              </div>
+            </div>
+
+            <table class="info-table">
+              <tbody>
+                <tr>
+                  <td>Student Name</td>
+                  <td>Kartikey Singh</td>
+                </tr>
+                <tr>
+                  <td>Enrollment No.</td>
+                  <td>202503103510392</td>
+                </tr>
+                <tr>
+                  <td>Department</td>
+                  <td>Computer Science &amp; Engineering</td>
+                </tr>
+                <tr>
+                  <td>Institute</td>
+                  <td>Asha M. Tarsadia Inst. of CS &amp; Tech (AMTICS)</td>
+                </tr>
+                <tr>
+                  <td>Subject Code</td>
+                  <td>IT4048</td>
+                </tr>
+                <tr>
+                  <td>Subject Name</td>
+                  <td>Version Control with Git &amp; GitHub</td>
+                </tr>
+                <tr>
+                  <td>Repository</td>
+                  <td>KartikeySingh_PortfolioWebsite</td>
+                </tr>
+                <tr>
+                  <td>Hosting</td>
+                  <td>GitHub Pages</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Skills Section
+         ======================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Skills &amp; Capabilities</span>
+          <h2 class="section-title">Technical Competencies &amp; Strengths</h2>
+          <p class="section-subtitle">
+            Core technical proficiencies and interpersonal strengths applied throughout academic coursework and project implementations.
+          </p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Card 1: Frontend Development -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-category-icon icon-blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div>
+                <h3>Frontend Development</h3>
+                <span>Core Web Technologies</span>
+              </div>
+            </div>
+            <p>Creating semantic, lightweight, and accessible user interfaces with modern client-side practices.</p>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill verified">HTML5 Semantic Elements</span>
+              <span class="skill-pill verified">CSS3 Custom Properties</span>
+              <span class="skill-pill verified">JavaScript (ES6+)</span>
+              <span class="skill-pill">Responsive Flexbox &amp; Grid</span>
+              <span class="skill-pill">Light &amp; Dark Theming</span>
+              <span class="skill-pill">DOM Manipulation</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend & Systems -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-category-icon icon-purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <div>
+                <h3>Backend &amp; Database</h3>
+                <span>Server &amp; Data Logic</span>
+              </div>
+            </div>
+            <p>Practical understanding of server scripting, REST API endpoints, and relational databases.</p>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill verified">PHP</span>
+              <span class="skill-pill verified">MySQL Database</span>
+              <span class="skill-pill verified">Node.js Basics</span>
+              <span class="skill-pill">Express.js Routing</span>
+              <span class="skill-pill">RESTful API Design</span>
+              <span class="skill-pill">Session Authentication</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Version Control & DevOps (Course IT4048 Focus) -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-category-icon icon-cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+              </div>
+              <div>
+                <h3>Git &amp; Version Control</h3>
+                <span>Subject: IT4048 Focus</span>
+              </div>
+            </div>
+            <p>Structured version tracking, branch management, remote synchronization, and continuous static deployment.</p>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill verified">Git CLI</span>
+              <span class="skill-pill verified">GitHub Repositories</span>
+              <span class="skill-pill verified">GitHub Pages Hosting</span>
+              <span class="skill-pill">Branching &amp; Merging</span>
+              <span class="skill-pill">Semantic Commit History</span>
+              <span class="skill-pill">Markdown Documentation</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Soft Skills & Engineering Habits -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-category-icon icon-emerald">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div>
+                <h3>Engineering &amp; Soft Skills</h3>
+                <span>Professional Habits</span>
+              </div>
+            </div>
+            <p>Analytical thinking, structured problem breakdown, clear communication, and collaborative mindset.</p>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill">Problem Decomposition</span>
+              <span class="skill-pill">Academic Collaboration</span>
+              <span class="skill-pill">Technical Documentation</span>
+              <span class="skill-pill">Time Management</span>
+              <span class="skill-pill">Self-Directed Research</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Projects Section
+         ======================================================================== -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Projects</span>
+          <h2 class="section-title">Verified &amp; Academic Projects</h2>
+          <p class="section-subtitle">
+            A portfolio of practical web applications, client-management tools, and academic software solutions.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend &amp; Git</button>
+          <button class="filter-btn" data-filter="academic">Academic Prototype</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Real-Time Resource Allocation Engine -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-badge-top">
+                <span class="project-type-tag">Full-Stack Web App</span>
+                <span class="project-status-verified">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  Verified Project
+                </span>
+              </div>
+              <div class="project-visual-preview">
+                <div class="preview-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                </div>
+                <span class="preview-architecture-text">PHP &bull; MySQL &bull; Vercel &bull; REST</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Real-Time Resource Allocation Engine (RTRAE)</h3>
+              <p class="project-description">
+                An intelligent scheduling and allocation management platform designed to automate resource assignments, maintain real-time audit logs, and prevent facility scheduling conflicts.
+              </p>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Dynamic resource scheduling &amp; conflict-free allocation</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Administrative audit trails &amp; visual capacity dashboards</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">Vercel</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/kartikeysingh-SK/resource-allocation" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>Repository</span>
+                </a>
+                <button class="btn btn-outline btn-sm view-project-details-btn" data-project="rtrae">
+                  <span>Architecture</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Smart Grocery Shopkeeper Management System -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-badge-top">
+                <span class="project-type-tag">Ledger &amp; Store App</span>
+                <span class="project-status-verified">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  Verified Project
+                </span>
+              </div>
+              <div class="project-visual-preview">
+                <div class="preview-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <span class="preview-architecture-text">Node.js &bull; Express &bull; Ledger &bull; Statement</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Smart Grocery Shopkeeper Management</h3>
+              <p class="project-description">
+                A digitized customer credit (Udhar / Khata) ledger web application tailored for local retail grocery shops to replace error-prone physical notebooks with automated balances and statements.
+              </p>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Customer transaction history &amp; automated balance calculation</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant digital udhar statements formatted for WhatsApp / Print</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">REST Services</span>
+              </div>
+
+              <div class="project-links">
+                <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="grocery">
+                  <span>View Details</span>
+                </button>
+                <button class="btn btn-outline btn-sm view-project-details-btn" data-project="grocery">
+                  <span>Architecture</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Personal Portfolio Website (Current Project) -->
+          <article class="project-card" data-category="frontend">
+            <div class="project-card-header">
+              <div class="project-badge-top">
+                <span class="project-type-tag">Course Mini-Project</span>
+                <span class="project-status-verified">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  Current IT4048
+                </span>
+              </div>
+              <div class="project-visual-preview">
+                <div class="preview-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <span class="preview-architecture-text">HTML5 &bull; CSS3 &bull; Vanilla JS &bull; GitHub Pages</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-description">
+                The current personal portfolio project built for the IT4048 academic submission, featuring custom CSS design tokens, dark/light theme switching, and live deployment on GitHub Pages.
+              </p>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>100% responsive without heavy third-party CSS frameworks</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Interactive project filter, mailto fallback, and résumé download</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">GitHub Pages</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+                <button class="btn btn-outline btn-sm view-project-details-btn" data-project="portfolio">
+                  <span>Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Parcel Transport Management System -->
+          <article class="project-card" data-category="academic">
+            <div class="project-card-header">
+              <div class="project-badge-top">
+                <span class="project-type-tag">Logistics Prototype</span>
+                <span class="project-status-verified" style="color:var(--accent-amber);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  Academic Blueprint
+                </span>
+              </div>
+              <div class="project-visual-preview">
+                <div class="preview-icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                </div>
+                <span class="preview-architecture-text">Logistics Model &bull; Tracking &bull; Consignment</span>
+              </div>
+            </div>
+
+            <div class="project-card-body">
+              <h3 class="project-title">Parcel Transport Management (PTMS)</h3>
+              <p class="project-description">
+                A structured academic blueprint and prototype for parcel consignment booking, route scheduling, courier status tracking, and delivery record reconciliation.
+              </p>
+
+              <ul class="project-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Consignment tracking workflows &amp; transit checkpoint models</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Clear status architecture: Booked, Dispatched, Delivered</span>
+                </li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5/CSS3</span>
+                <span class="tech-tag">Workflow Design</span>
+                <span class="tech-tag">State Modeling</span>
+              </div>
+
+              <div class="project-links">
+                <button class="btn btn-secondary btn-sm view-project-details-btn" data-project="ptms">
+                  <span>View Concept</span>
+                </button>
+                <button class="btn btn-outline btn-sm view-project-details-btn" data-project="ptms">
+                  <span>Architecture</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Git & GitHub Workflow Section (IT4048 Subject Requirement)
+         ======================================================================== -->
+    <section class="section" id="git-workflow">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">IT4048 Academic Spotlight</span>
+          <h2 class="section-title">Git &amp; GitHub Version Control Pipeline</h2>
+          <p class="section-subtitle">
+            Demonstrating key concepts of Version Control with Git and GitHub, from repository initialization to continuous static deployment.
+          </p>
+        </div>
+
+        <div class="git-workflow-grid">
+          <div class="workflow-card">
+            <span class="step-num">Step 01</span>
+            <h4>Repository Initialization</h4>
+            <p>Configured local Git tracking, initialized master branch, and defined .gitignore to avoid committing temporary build artifacts.</p>
+            <code class="workflow-cmd">git init &amp;&amp; git branch -M main</code>
+          </div>
+
+          <div class="workflow-card">
+            <span class="step-num">Step 02</span>
+            <h4>Semantic Commit Structure</h4>
+            <p>Adopted clear semantic commit messages (feat, fix, style, docs) ensuring a fully traceable and audit-ready project change history.</p>
+            <code class="workflow-cmd">git commit -m "feat: design responsive UI"</code>
+          </div>
+
+          <div class="workflow-card">
+            <span class="step-num">Step 03</span>
+            <h4>Remote Synchronization</h4>
+            <p>Linked local working tree with GitHub remote repository using secure HTTPS credentials for code collaboration.</p>
+            <code class="workflow-cmd">git remote add origin https://github.com/...</code>
+          </div>
+
+          <div class="workflow-card">
+            <span class="step-num">Step 04</span>
+            <h4>GitHub Pages Deployment</h4>
+            <p>Automated static web distribution through GitHub Pages branch publishing directly from the root repository directory.</p>
+            <code class="workflow-cmd">https://kartikeysingh-sk.github.io/...</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Résumé Section
+         ======================================================================== -->
+    <section class="section section-alt" id="resume">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curriculum Vitae</span>
+          <h2 class="section-title">Professional Résumé</h2>
+          <p class="section-subtitle">
+            Review my academic credentials, core technical skill sets, and project milestones in a clean, downloadable PDF format.
+          </p>
+        </div>
+
+        <div class="resume-box">
+          <div class="resume-content">
+            <h3>Kartikey Singh &mdash; Résumé</h3>
+            <p>
+              An editable, verified academic résumé template prepared specifically for academic submission and future internship applications. It highlights current education at AMTICS, technical coursework in Git, programming languages, and practical web applications.
+            </p>
+
+            <div class="resume-specs">
+              <div class="spec-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Education:</strong> B.Tech Computer Science &amp; Engineering</span>
+              </div>
+              <div class="spec-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Course Code:</strong> IT4048 - Version Control with Git &amp; GitHub</span>
+              </div>
+              <div class="spec-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Format:</strong> High-resolution vector PDF</span>
+              </div>
+              <div class="spec-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>File Location:</strong> assets/resume/Kartikey_Singh_Resume.pdf</span>
+              </div>
+            </div>
+
+            <div class="resume-actions">
+              <a href="assets/resume/Kartikey_Singh_Resume.pdf" class="btn btn-primary" download="Kartikey_Singh_Resume.pdf" id="btn-download-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Résumé (PDF)</span>
+              </a>
+              <a href="assets/resume/Kartikey_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-view-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Open in Browser</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Résumé Snapshot Card -->
+          <div class="resume-preview-card">
+            <div class="resume-preview-header">
+              <h4>Kartikey Singh</h4>
+              <span>Enrollment: 202503103510392</span>
+            </div>
+            <div class="resume-mini-section">
+              <h5>Education</h5>
+              <p>B.Tech Computer Science &amp; Engineering<br>Asha M. Tarsadia Institute of CS &amp; Tech (AMTICS)</p>
+            </div>
+            <div class="resume-mini-section">
+              <h5>Technical Focus</h5>
+              <p>Frontend (HTML5, CSS3, JS), Backend (PHP, Node, MySQL), Version Control (Git/GitHub).</p>
+            </div>
+            <div class="resume-mini-section">
+              <h5>Projects Highlighted</h5>
+              <p>Real-Time Resource Allocation Engine, Smart Grocery Management, Personal Portfolio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Contact Section
+         ======================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Contact &amp; Connect</h2>
+          <p class="section-subtitle">
+            Have a question, feedback on this project, or an opportunity to discuss? Send a message below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels -->
+          <div class="contact-info-panel">
+            <div class="contact-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-details">
+                <h4>Official Email</h4>
+                <a href="mailto:25amtics392@gmail.com">25amtics392@gmail.com</a>
+              </div>
+              <button class="copy-btn" data-copy="25amtics392@gmail.com" title="Copy email address">Copy</button>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub Profile</h4>
+                <a href="https://github.com/kartikeysingh-SK" target="_blank" rel="noopener noreferrer">@kartikeysingh-SK</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Surat, Gujarat, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form with Client-Side Validation & Mailto Handlers -->
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Your Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Johnson" required>
+                <span class="form-error-msg">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="alex@example.com" required>
+                <span class="form-error-msg">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Project Inquiry / Feedback">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message *</label>
+                <textarea id="contact-message" class="form-control" placeholder="Write your message here (min. 10 characters)..." required></textarea>
+                <span class="form-error-msg">Message must be at least 10 characters long.</span>
+              </div>
+
+              <div id="form-status" class="form-status" role="alert"></div>
+
+              <button type="submit" class="btn btn-primary" id="btn-submit-contact">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <span class="brand-icon">KS</span>
+            <span>Kartikey<span class="gradient-text">.dev</span></span>
+          </a>
+          <p>
+            Academic Mini Project for <strong>IT4048: Version Control with Git &amp; GitHub</strong>.<br>
+            Designed and built by Kartikey Singh (Enrollment: 202503103510392).
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#git-workflow">Git Workflow</a>
+            <a href="#resume">Résumé</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Verified Links</h4>
+          <div class="footer-links">
+            <a href="https://github.com/kartikeysingh-SK" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+            <a href="https://github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite" target="_blank" rel="noopener noreferrer">Portfolio Repository</a>
+            <a href="https://github.com/kartikeysingh-SK/resource-allocation" target="_blank" rel="noopener noreferrer">RTRAE Repository</a>
+            <a href="assets/resume/Kartikey_Singh_Resume.pdf" download="Kartikey_Singh_Resume.pdf">Download Résumé</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2026 Kartikey Singh. All rights reserved. Academic Mini Project &bull; Subject Code: IT4048.
+        </p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          <span>Back to Top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Project Architecture & Details Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close project modal">&times;</button>
+      <h3 id="modal-title" style="font-size:1.4rem;font-weight:700;margin-bottom:0.25rem;">Project Title</h3>
+      <span id="modal-category" style="font-size:0.82rem;color:var(--accent-primary);display:block;margin-bottom:1rem;font-weight:600;">Category</span>
+      <p id="modal-summary" style="font-size:0.92rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.25rem;">Summary</p>
+
+      <h4 style="font-size:0.95rem;font-weight:700;margin-bottom:0.6rem;">Key Engineering Highlights</h4>
+      <ul id="modal-highlights" style="font-size:0.88rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.25rem;"></ul>
+
+      <h4 style="font-size:0.95rem;font-weight:700;margin-bottom:0.6rem;">Technologies Applied</h4>
+      <div id="modal-tech" style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;"></div>
+
+      <div style="display:flex;gap:0.75rem;">
+        <a id="modal-repo-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>View GitHub Source</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

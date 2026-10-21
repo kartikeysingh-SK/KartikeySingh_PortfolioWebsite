@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Report - IT4048 - Kartikey Singh</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 18mm 20mm 18mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 10.5pt;
+      background: #ffffff;
+    }
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    /* Cover Page */
+    .cover-container {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      border: 3px double #2563eb;
+    }
+    .institute-title {
+      font-size: 18pt;
+      font-weight: 800;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .dept-title {
+      font-size: 13pt;
+      font-weight: 600;
+      color: #475569;
+    }
+    .report-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      color: #2563eb;
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 30px 0 15px;
+    }
+    .project-main-title {
+      font-size: 26pt;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .project-sub-title {
+      font-size: 12pt;
+      color: #64748b;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .meta-box {
+      width: 100%;
+      max-width: 520px;
+      border-top: 2px solid #2563eb;
+      border-bottom: 2px solid #2563eb;
+      padding: 16px 0;
+      margin: 30px 0;
+      text-align: left;
+    }
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .meta-table td {
+      padding: 6px 12px;
+      font-size: 10.5pt;
+    }
+    .meta-label {
+      font-weight: bold;
+      color: #334155;
+      width: 45%;
+    }
+    .meta-val {
+      color: #0f172a;
+      font-weight: 600;
+    }
+    .academic-session {
+      font-size: 10pt;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* Content Pages */
+    h1.chapter-title {
+      font-size: 18pt;
+      font-weight: 800;
+      color: #1e3a8a;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+      margin-top: 10px;
+    }
+    h2.section-heading {
+      font-size: 13pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 16px;
+      margin-bottom: 8px;
+      border-left: 4px solid #2563eb;
+      padding-left: 8px;
+    }
+    h3 {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #334155;
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    ul, ol {
+      margin-left: 22px;
+      margin-bottom: 12px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 9.5pt;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 7px 10px;
+      text-align: left;
+    }
+    table.data-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    table.data-table tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .badge-pass {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 700;
+      border-radius: 4px;
+      font-size: 8.5pt;
+    }
+    code {
+      font-family: Consolas, 'Courier New', monospace;
+      background: #f1f5f9;
+      color: #0969da;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-size: 9pt;
+    }
+    .callout {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 10px 14px;
+      margin: 14px 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 9.5pt;
+    }
+    .img-box {
+      margin: 14px 0;
+      text-align: center;
+    }
+    .img-box img {
+      max-width: 95%;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .img-caption {
+      font-size: 8.5pt;
+      color: #64748b;
+      font-style: italic;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================================
+       PAGE 1: COVER PAGE
+       ====================================================================== -->
+  <div class="cover-container">
+    <div>
+      <div class="institute-title">Asha M. Tarsadia Institute of Computer Science and Technology</div>
+      <div class="dept-title">Department of Computer Science and Engineering</div>
+      <div class="report-badge">Academic Mini-Project Report</div>
+    </div>
+
+    <div>
+      <h1 class="project-main-title">Personal Portfolio Website</h1>
+      <p class="project-sub-title">A Responsive, Modern Web Application with Version Control &amp; Continuous Static Deployment</p>
+    </div>
+
+    <div class="meta-box">
+      <table class="meta-table">
+        <tr>
+          <td class="meta-label">Student Name:</td>
+          <td class="meta-val">Kartikey Singh</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Enrollment Number:</td>
+          <td class="meta-val">202503103510392</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Subject Code:</td>
+          <td class="meta-val">IT4048</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Subject Name:</td>
+          <td class="meta-val">Version Control with Git and GitHub</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Repository Name:</td>
+          <td class="meta-val">KartikeySingh_PortfolioWebsite</td>
+        </tr>
+        <tr>
+          <td class="meta-label">Deployment Platform:</td>
+          <td class="meta-val">GitHub Pages</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="academic-session">
+      Academic Year 2026 &bull; Submission Deadline: 24 October 2026<br>
+      Surat, Gujarat, India
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================================
+       PAGE 2: INTRODUCTION & OBJECTIVES
+       ====================================================================== -->
+  <h1 class="chapter-title">1. Introduction &amp; Project Objectives</h1>
+
+  <h2 class="section-heading">1.1 Introduction</h2>
+  <p>
+    In the modern software engineering landscape, a personal developer portfolio serves as the definitive digital resume and technical identity for aspiring computing professionals. Rather than relying solely on static paper resumes, a well-crafted web portfolio demonstrates practical mastery over core frontend technologies, user experience design principles, responsive web layouts, accessibility standards, and professional version control workflows.
+  </p>
+  <p>
+    This project, titled <strong>Personal Portfolio Website</strong>, was designed and implemented as an academic mini-project for the subject <strong>IT4048: Version Control with Git and GitHub</strong> at Asha M. Tarsadia Institute of Computer Science and Technology (AMTICS). The website provides a modern, fast-loading, and visually captivating presentation of Kartikey Singh's academic profile, technical skill competencies, completed projects, and downloadable curriculum vitae.
+  </p>
+
+  <h2 class="section-heading">1.2 Primary Objectives</h2>
+  <p>The core objectives achieved in this project include:</p>
+  <ul>
+    <li><strong>Professional Digital Presentation:</strong> Presenting student information, technical proficiencies, engineering habits, and real-world projects in a structured, elegant manner.</li>
+    <li><strong>Design Excellence &amp; Custom Aesthetic:</strong> Implementing a premium dark-themed design system with electric blue and violet accents, glassmorphic cards, readable typography (Plus Jakarta Sans &amp; JetBrains Mono), and fluid transitions without relying on generic frameworks or bloat.</li>
+    <li><strong>Light &amp; Dark Theme Architecture:</strong> Providing seamless light and dark mode toggling using CSS custom properties with automatic <code>localStorage</code> persistence.</li>
+    <li><strong>Mobile-First Responsiveness:</strong> Ensuring complete usability across mobile devices (320px–480px), tablets (768px–1024px), and large desktop displays.</li>
+    <li><strong>Version Control Mastery (IT4048):</strong> Implementing structured Git version control practices, including atomic semantic commit histories, clean branch management, repository tagging, and continuous deployment via GitHub Pages.</li>
+    <li><strong>Zero Backend Hosting Compatibility:</strong> Architecting the application as a purely static site compatible with free GitHub Pages hosting, including a validated client-side contact form with mailto fallback and vector PDF resume download.</li>
+  </ul>
+
+  <h2 class="section-heading">1.3 Technologies Applied</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Technology</th>
+        <th>Purpose / Role in Project</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Structure</td>
+        <td>HTML5</td>
+        <td>Semantic document architecture (header, nav, main, section, article, footer).</td>
+      </tr>
+      <tr>
+        <td>Styling</td>
+        <td>CSS3</td>
+        <td>Custom design tokens, CSS Grid, Flexbox, Glassmorphism, animations, print media.</td>
+      </tr>
+      <tr>
+        <td>Behavior</td>
+        <td>JavaScript (ES6+)</td>
+        <td>Theme switcher, mobile navigation drawer, form validation, filter engine, modal dialog.</td>
+      </tr>
+      <tr>
+        <td>Version Control</td>
+        <td>Git CLI</td>
+        <td>Local tracking, branch isolation, staged changes, semantic commits.</td>
+      </tr>
+      <tr>
+        <td>Hosting &amp; Remote</td>
+        <td>GitHub &amp; Pages</td>
+        <td>Remote code synchronization, version backup, and automated static web publishing.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================================
+       PAGE 3: SYSTEM ARCHITECTURE & FEATURES
+       ====================================================================== -->
+  <h1 class="chapter-title">2. System Architecture &amp; Features</h1>
+
+  <h2 class="section-heading">2.1 Directory Structure</h2>
+  <p>
+    The repository adheres to a clean, modular directory structure tailored for static web hosting and maintainability:
+  </p>
+  <pre style="background:#f8fafc; border:1px solid #cbd5e1; padding:10px 14px; border-radius:6px; font-size:9pt; font-family:Consolas, monospace; margin-bottom:14px;">
+KartikeySingh_PortfolioWebsite/
+├── index.html                      # Core semantic single-page web document
+├── README.md                       # Comprehensive repository documentation
+├── .gitignore                      # Operating system, editor, and cache filter
+├── assets/
+│   ├── css/
+│   │   └── style.css               # Central stylesheet (variables, components, media queries)
+│   ├── js/
+│   │   └── script.js               # Interactive controller &amp; event engine
+│   ├── images/
+│   │   ├── screenshot_hero_desktop.png
+│   │   ├── screenshot_fullpage.png
+│   │   ├── screenshot_light_mode.png
+│   │   └── screenshot_mobile.png
+│   └── resume/
+│       ├── resume_template.html    # High-resolution print template
+│       └── Kartikey_Singh_Resume.pdf# Downloadable vector PDF résumé
+└── report/
+    ├── project_report_source.html  # Academic report source document
+    └── GitHub_202503103510392_Kartikey_Singh.pdf
+  </pre>
+
+  <h2 class="section-heading">2.2 Functional Modules &amp; Website Sections</h2>
+  <ul>
+    <li>
+      <strong>Home / Hero Section:</strong> Displays an animated availability indicator, student developer name with gradient typography, developer role badge, meta information pills (Enrollment, Course Code, City), quick CTA buttons ("View My Projects" and "Download Résumé"), social connect links, and an interactive syntax-highlighted developer terminal card.
+    </li>
+    <li>
+      <strong>About Me Section:</strong> Highlights Kartikey's academic background at AMTICS, core engineering philosophy, and four key pillar cards: Full-Stack Exploration, Version Control, Responsive Design, and Continuous Learning, accompanied by an official Academic Profile card.
+    </li>
+    <li>
+      <strong>Technical Competencies (Skills) Section:</strong> Categorized competency cards for Frontend, Backend/Database, Git/Version Control (IT4048 focus), and Soft Skills. Displays clear skill pill tags without misleading percentage meters.
+    </li>
+    <li>
+      <strong>Featured Projects Section:</strong> Showcase of 4 projects (Real-Time Resource Allocation Engine, Smart Grocery Management, Personal Portfolio, and PTMS) with dynamic category filtering, verified repository links, architecture highlight modals, and tech tags.
+    </li>
+    <li>
+      <strong>IT4048 Git Workflow Section:</strong> Educational visual timeline illustrating 4 foundational steps of modern version control: Git init &amp; branching, semantic commits, remote synchronization, and continuous static distribution via GitHub Pages.
+    </li>
+    <li>
+      <strong>Downloadable Résumé Section:</strong> Interactive preview and direct download handler pointing to <code>assets/resume/Kartikey_Singh_Resume.pdf</code>.
+    </li>
+    <li>
+      <strong>Validated Contact Section:</strong> Contact cards with 1-click clipboard email copy, GitHub link, and a validated client-side contact form featuring clean user feedback and mailto redirection.
+    </li>
+    <li>
+      <strong>Footer &amp; Utility:</strong> Semantic footer with copyright details, verified links, and an animated Back-to-Top smooth scroll button.
+    </li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================================
+       PAGE 4: GIT & GITHUB VERSION CONTROL WORKFLOW
+       ====================================================================== -->
+  <h1 class="chapter-title">3. Git &amp; GitHub Version Control Pipeline</h1>
+
+  <h2 class="section-heading">3.1 Version Control Methodology (IT4048 Core)</h2>
+  <p>
+    Version control is the discipline of managing changes to software source code over time. For this mini-project, Git version 2.55 was utilized to track incremental project evolution from ground zero to the final published application.
+  </p>
+
+  <h2 class="section-heading">3.2 Commit History &amp; Semantic Conventions</h2>
+  <p>
+    To ensure professional traceability, commits adhere to the <em>Conventional Commits</em> standard. Every commit clearly specifies its type and scope:
+  </p>
+  <ul>
+    <li><code>feat(structure): initialize semantic HTML5 portfolio foundation</code></li>
+    <li><code>style(design): implement dark/light custom property design system</code></li>
+    <li><code>feat(interactivity): implement theme switcher, mobile drawer, and modal engine</code></li>
+    <li><code>feat(resume): generate vector resume PDF and download assets</code></li>
+    <li><code>test(qa): conduct browser automation, cross-viewport tests, and visual capture</code></li>
+    <li><code>docs(report): compile comprehensive academic report and submission README</code></li>
+  </ul>
+
+  <h2 class="section-heading">3.3 Deployment Pipeline (GitHub Pages)</h2>
+  <p>
+    The project leverages GitHub Pages for continuous static delivery. The deployment workflow operates as follows:
+  </p>
+  <div class="callout">
+    <strong>Continuous Deployment Flow:</strong><br>
+    Local Workspace (Scratch) &rarr; Git Staging (<code>git add</code>) &rarr; Semantic Commit (<code>git commit</code>) &rarr; Push to GitHub (<code>git push origin main</code>) &rarr; GitHub Pages Automated Environment Build &rarr; Live HTTPS Distribution at:
+    <br><code>https://kartikeysingh-SK.github.io/KartikeySingh_PortfolioWebsite/</code>
+  </div>
+
+  <h2 class="section-heading">3.4 Quality Assurance &amp; Test Results</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Test Case ID</th>
+        <th>Feature Tested</th>
+        <th>Test Action &amp; Input</th>
+        <th>Expected Result</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TC-01</td>
+        <td>Page Load &amp; HTTP Status</td>
+        <td>Request root <code>/index.html</code> via local test server.</td>
+        <td>HTTP 200 OK, zero syntax or console errors.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-02</td>
+        <td>Theme Switching</td>
+        <td>Click theme toggle button (moon/sun).</td>
+        <td>Attribute <code>data-theme</code> switches, persisted in <code>localStorage</code>.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-03</td>
+        <td>Mobile Drawer Navigation</td>
+        <td>Viewport width 390px, click hamburger icon.</td>
+        <td>Drawer expands smoothly with accessible aria-expanded state.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-04</td>
+        <td>Interactive Project Filtering</td>
+        <td>Click "Full-Stack", "Frontend", "All" filter tabs.</td>
+        <td>Cards display/hide correctly matching category tags.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-05</td>
+        <td>Contact Form Validation</td>
+        <td>Submit form with empty or invalid email address.</td>
+        <td>Inline error indicators appear, preventing invalid submission.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-06</td>
+        <td>Mailto Fallback Redirection</td>
+        <td>Submit valid contact form inputs.</td>
+        <td>System triggers mailto handler with prefilled subject and body.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-07</td>
+        <td>Résumé PDF File Availability</td>
+        <td>Download link <code>assets/resume/Kartikey_Singh_Resume.pdf</code>.</td>
+        <td>PDF file downloads successfully; size verified at ~106 KB.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+      <tr>
+        <td>TC-08</td>
+        <td>Smooth Scroll &amp; Back-to-Top</td>
+        <td>Click navigation links and bottom back-to-top button.</td>
+        <td>Smooth animated scrolling to target IDs without layout shift.</td>
+        <td><span class="badge-pass">PASS</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================================
+       PAGE 5: VISUAL EVIDENCE & SCREENSHOTS
+       ====================================================================== -->
+  <h1 class="chapter-title">4. Genuine Website Screenshots</h1>
+
+  <h2 class="section-heading">4.1 Desktop Hero &amp; Navigation (Dark Mode)</h2>
+  <div class="img-box">
+    <img src="../assets/images/screenshot_hero_desktop.png" alt="Desktop Hero View">
+    <div class="img-caption">Figure 4.1: Desktop Hero Section showing modern branding, CTA buttons, and interactive code card.</div>
+  </div>
+
+  <h2 class="section-heading">4.2 Light Theme Alternative</h2>
+  <div class="img-box">
+    <img src="../assets/images/screenshot_light_mode.png" alt="Light Mode View">
+    <div class="img-caption">Figure 4.2: High-contrast Light Mode theme with consistent visual hierarchy and legible typography.</div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ======================================================================
+       PAGE 6: RESPONSIVENESS & CONCLUSION
+       ====================================================================== -->
+  <h1 class="chapter-title">5. Responsive Design &amp; Conclusion</h1>
+
+  <h2 class="section-heading">5.1 Mobile Device Rendering (390px Viewport)</h2>
+  <div class="img-box">
+    <img src="../assets/images/screenshot_mobile.png" style="max-height:360px; width:auto;" alt="Mobile View">
+    <div class="img-caption">Figure 5.1: Fully responsive mobile layout tested on 390px mobile viewport with hamburger drawer.</div>
+  </div>
+
+  <h2 class="section-heading">5.2 Verified Project Links</h2>
+  <ul>
+    <li><strong>GitHub User Profile:</strong> <a href="https://github.com/kartikeysingh-SK" style="color:#2563eb;">https://github.com/kartikeysingh-SK</a></li>
+    <li><strong>Project Repository:</strong> <a href="https://github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite" style="color:#2563eb;">https://github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite</a></li>
+    <li><strong>Live Deployment URL:</strong> <a href="https://kartikeysingh-SK.github.io/KartikeySingh_PortfolioWebsite/" style="color:#2563eb;">https://kartikeysingh-SK.github.io/KartikeySingh_PortfolioWebsite/</a></li>
+    <li><strong>Academic Submission Upload Drive:</strong> <a href="https://drive.google.com/drive/folders/122W5B3tNqc7r6aJS-tIkOIpjNgjHJ_dj?usp=sharing" style="color:#2563eb;">Google Drive Upload Folder</a></li>
+  </ul>
+
+  <h2 class="section-heading">5.3 Conclusion</h2>
+  <p>
+    The <strong>Personal Portfolio Website</strong> academic mini-project successfully demonstrates comprehensive mastery of core web technologies (HTML5, CSS3, JavaScript) and industry-standard version control methodologies using Git and GitHub. Through systematic planning, modern UI/UX design, accessible component engineering, thorough testing across multiple viewports, and continuous deployment configuration, all criteria stipulated for course <strong>IT4048</strong> have been rigorously fulfilled.
+  </p>
+  <p>
+    The resulting website stands as an authentic, high-performance portfolio representing Kartikey Singh's academic progress at Asha M. Tarsadia Institute of Computer Science and Technology, providing a solid foundation for future technical endeavors.
+  </p>
+
+</body>
+</html>
