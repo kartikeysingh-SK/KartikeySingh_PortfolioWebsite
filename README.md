@@ -47,7 +47,7 @@ Built with semantic **HTML5**, modern **CSS3** design tokens (with Dark and Ligh
 4. **Featured Technical Projects Showcase:**
    - Interactive category filter tabs (**All**, **Full-Stack**, **Frontend & Git**, **Academic Prototype**).
    - **Real-Time Resource Allocation Engine (RTRAE)** — Full-stack PHP/MySQL/Vercel project with linked repo.
-   - **Smart Grocery Shopkeeper Management System** — Node.js/Express Udhar & ledger management project.
+   - **Parcel Transport Management System (Deepak Tempo PTMS)** — Logistics fleet & consignment dispatch tracking project with linked repo: [deepak-tempo-ptms-main](https://github.com/kartikeysingh-SK/deepak-tempo-ptms-main).
    - **Personal Portfolio Website** — Current IT4048 semantic HTML5/CSS3/JS website.
    - **Parcel Transport Management System (PTMS)** — Logistics workflow prototype.
    - Interactive project architecture modals with key highlights and tech tags.

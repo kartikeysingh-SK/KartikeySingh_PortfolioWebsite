@@ -314,7 +314,7 @@ const projectDatabase = {
     title: 'Smart Grocery Shopkeeper Management System',
     category: 'Full-Stack Web Application / Academic Project',
     status: 'Verified Project in Workspace',
-    repoUrl: 'https://github.com/kartikeysingh-SK/smart-grocery-management',
+    repoUrl: 'https://github.com/kartikeysingh-SK/deepak-tempo-ptms-main',
     summary: 'A responsive digital ledger (Udhar / Khata) web application designed for local retail merchants to eliminate notebook-based bookkeeping, calculate real-time credit balances, and generate digital customer statements.',
     highlights: [
       'Interactive shopkeeper dashboard with daily credit and settlement summaries.',
