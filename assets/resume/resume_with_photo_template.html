@@ -22,36 +22,35 @@
     }
     .header {
       border-bottom: 2px solid #2563eb;
-      padding-bottom: 12px;
+      padding-bottom: 14px;
       margin-bottom: 16px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
+      align-items: center;
+      gap: 20px;
     }
-    .name-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+    .header-text {
+      flex: 1;
     }
     h1 {
       font-size: 22pt;
       color: #0f172a;
       letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 3px;
     }
     .subtitle {
       font-size: 11pt;
       color: #2563eb;
       font-weight: 600;
-      margin-top: 2px;
+      margin-bottom: 8px;
     }
     .contact-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 8px;
       font-size: 9.5pt;
       color: #475569;
-      margin-top: 8px;
     }
     .contact-bar span {
       display: inline-flex;
@@ -60,22 +59,23 @@
     }
     .photo-wrapper {
       flex-shrink: 0;
-      width: 85px;
-      height: 105px;
-      border-radius: 4px;
+      width: 95px;
+      height: 122px;
+      border-radius: 6px;
       overflow: hidden;
       border: 1.5px solid #cbd5e1;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-      background-color: #f1f5f9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      background-color: #f8fafc;
     }
     .photo-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 10%;
       display: block;
     }
     .section {
-      margin-bottom: 14px;
+      margin-bottom: 13px;
     }
     h2 {
       font-size: 12pt;
@@ -135,15 +135,16 @@
 <body>
 
   <div class="header">
-    <div style="flex: 1;">
-      <div class="name-title">
-        <h1>KARTIKEY SINGH</h1>
-        <span class="subtitle">Computer Science &amp; Engineering Student</span>
-      </div>
+    <div class="header-text">
+      <h1>KARTIKEY SINGH</h1>
+      <div class="subtitle">Computer Science &amp; Engineering Student</div>
       <div class="contact-bar">
         <span><strong>Enrollment:</strong> 202503103510392</span>
+        <span>&bull;</span>
         <span><strong>Email:</strong> 25amtics392@gmail.com</span>
+        <span>&bull;</span>
         <span><strong>Location:</strong> Surat, Gujarat, India</span>
+        <span>&bull;</span>
         <span><strong>GitHub:</strong> github.com/kartikeysingh-SK</span>
       </div>
     </div>
