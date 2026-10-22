@@ -296,61 +296,50 @@ function initBackToTop() {
    7. Project Details Modal System
    -------------------------------------------------------------------------- */
 const projectDatabase = {
-  rtrae: {
-    title: 'Real-Time Resource Allocation Engine (RTRAE)',
-    category: 'Full-Stack Web Application',
-    status: 'Verified Project in Workspace',
-    repoUrl: 'https://github.com/kartikeysingh-SK/resource-allocation',
-    summary: 'A full-stack resource management and scheduling system built with PHP and MySQL backend, featuring automated resource assignment, dynamic analytics dashboards, audit logs, and natural language allocation assistance.',
-    highlights: [
-      'Engineered automated task scheduling with conflict detection across users and assets.',
-      'Designed role-based access control (Admin, Manager, Staff) with session authentication.',
-      'Implemented dynamic analytics charts and audit logs for administrative tracking.',
-      'Configured for Vercel and cloud-compatible database deployment.'
-    ],
-    tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5/CSS3', 'REST API', 'Vercel']
-  },
-  grocery: {
-    title: 'Smart Grocery Shopkeeper Management System',
-    category: 'Full-Stack Web Application / Academic Project',
-    status: 'Verified Project in Workspace',
-    repoUrl: 'https://github.com/kartikeysingh-SK/deepak-tempo-ptms-main',
-    summary: 'A responsive digital ledger (Udhar / Khata) web application designed for local retail merchants to eliminate notebook-based bookkeeping, calculate real-time credit balances, and generate digital customer statements.',
-    highlights: [
-      'Interactive shopkeeper dashboard with daily credit and settlement summaries.',
-      'Customer-wise ledger with automatic balance computation upon transaction entry.',
-      'Digital udhar statement generation ready for printing or WhatsApp sharing.',
-      'Modular client-side architecture backed by Express.js API services.'
-    ],
-    tech: ['Node.js', 'Express.js', 'JavaScript', 'HTML5/CSS3', 'RESTful API']
-  },
   portfolio: {
     title: 'Personal Portfolio Website (IT4048 Mini Project)',
-    category: 'Frontend & Version Control Project',
-    status: 'Active Repository',
+    category: 'Frontend & Version Control Engineering',
+    status: 'Live on GitHub Pages',
     repoUrl: 'https://github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite',
-    summary: 'A modern, accessible developer portfolio website engineered with clean semantic HTML5, custom CSS design system with light/dark theme toggles, and vanilla JavaScript without external bloat.',
+    liveUrl: 'https://kartikeysingh-sk.github.io/KartikeySingh_PortfolioWebsite/',
+    summary: 'An editorial luxury developer portfolio website engineered with clean semantic HTML5, custom design tokens, dark/light theme switching, and automated GitHub Pages deployment for course IT4048.',
     highlights: [
-      'Custom CSS3 design tokens supporting high-contrast Dark and Light modes.',
+      'Custom CSS design tokens supporting high-contrast Dark and Light modes.',
       'Fluid responsiveness tested across mobile (375px), tablet (768px), and desktop (1200px+).',
       'Accessible semantic structure, keyboard navigation, and reduced-motion awareness.',
       'Complete Git and GitHub Pages continuous deployment pipeline.'
     ],
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'Git', 'GitHub Pages']
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Git', 'GitHub Pages', 'Tailwind CSS']
   },
   ptms: {
-    title: 'Parcel Transport Management System (PTMS)',
-    category: 'Academic Concept & Prototype',
-    status: 'Sample / Academic Blueprint',
-    repoUrl: '',
-    summary: 'A conceptual parcel tracking and logistics management platform for handling consignment bookings, shipment transit states, and delivery status verification.',
+    title: 'Deepak Tempo Service — Parcel Transport Management System (PTMS)',
+    category: 'Logistics & Fleet Workflow Management',
+    status: 'Live Deployed on Vercel',
+    repoUrl: 'https://github.com/kartikeysingh-SK/deepak-tempo-ptms-main',
+    liveUrl: 'https://deepak-tempo-ptms-main-pzc7.vercel.app/',
+    summary: 'A comprehensive logistics management and parcel tracking application engineered for Deepak Tempo Service to oversee consignment bookings, dispatch queues, transit routes, digital lorry receipts (Bilty), and automated COD settlements.',
     highlights: [
-      'Designed consignment intake workflows and automated consignment ID generation.',
-      'Transit route milestones and delivery checkpoint tracking model.',
-      'Clear status indicators for In-Transit, Out for Delivery, and Completed.',
-      'Identified as an academic prototype for student customization.'
+      'Digital consignment booking and automated waybill receipt generation.',
+      'Real-time dispatch workflow monitoring and multi-checkpoint transit logs.',
+      'Fleet vehicle management and transport contractor route tracking.',
+      'Live deployed on Vercel with responsive mobile and desktop interfaces.'
     ],
-    tech: ['JavaScript', 'HTML5', 'CSS3', 'Workflow Modeling']
+    tech: ['JavaScript', 'HTML5', 'CSS3', 'Logistics Workflow', 'REST API', 'Vercel']
+  },
+  rtrae: {
+    title: 'Real-Time Resource Allocation Engine (RTRAE)',
+    category: 'Full-Stack Web Application / Resource Scheduling',
+    status: 'Live Deployed on Vercel',
+    repoUrl: 'https://github.com/kartikeysingh-SK/resource-allocation',
+    liveUrl: 'https://resource-allocation-lilac.vercel.app/',
+    summary: 'A high-performance algorithmic scheduling and resource allocation engine designed to optimize multi-sector workload distribution, room bookings, laboratories, and GPU clusters in sub-3ms deliberation time.',
+    highlights: [
+      'Engineered automated task scheduling with conflict detection across users and assets.',
+      'Designed role-based access control (Admin, Manager, Staff) with session authentication.',
+      'Implemented dynamic analytics charts and audit logs for administrative tracking.',
+      'Live deployed and operational on Vercel platform.'
+    ],
+    tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5/CSS3', 'REST API', 'Vercel']
   }
 };
 

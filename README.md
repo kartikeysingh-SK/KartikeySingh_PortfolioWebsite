@@ -45,12 +45,9 @@ Built with semantic **HTML5**, modern **CSS3** design tokens (with Dark and Ligh
    - Animated mobile navigation hamburger drawer with backdrop overlay.
 
 4. **Featured Technical Projects Showcase:**
-   - Interactive category filter tabs (**All**, **Full-Stack**, **Frontend & Git**, **Academic Prototype**).
-   - **Real-Time Resource Allocation Engine (RTRAE)** — Full-stack PHP/MySQL/Vercel project with linked repo.
-   - **Parcel Transport Management System (Deepak Tempo PTMS)** — Logistics fleet & consignment dispatch tracking project with linked repo: [deepak-tempo-ptms-main](https://github.com/kartikeysingh-SK/deepak-tempo-ptms-main).
-   - **Personal Portfolio Website** — Current IT4048 semantic HTML5/CSS3/JS website.
-   - **Parcel Transport Management System (PTMS)** — Logistics workflow prototype.
-   - Interactive project architecture modals with key highlights and tech tags.
+   - **Personal Portfolio Website** — Modern responsive developer portfolio with light/dark theming and CI/CD static distribution: [GitHub Pages Live](https://kartikeysingh-sk.github.io/KartikeySingh_PortfolioWebsite/) | [Repository](https://github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite)
+   - **Deepak Tempo Service — Parcel Transport Management System (PTMS)** — Logistics fleet & consignment dispatch tracking system with digital bilty generation: [Vercel Live](https://deepak-tempo-ptms-main-pzc7.vercel.app/) | [Repository](https://github.com/kartikeysingh-SK/deepak-tempo-ptms-main)
+   - **Real-Time Resource Allocation Engine (RTRAE)** — High-performance algorithmic scheduling and resource assignment platform: [Vercel Live](https://resource-allocation-lilac.vercel.app/) | [Repository](https://github.com/kartikeysingh-SK/resource-allocation)
 
 5. **IT4048 Version Control Spotlight:**
    - Dedicated workflow timeline highlighting Git initialization, semantic commit conventions, remote sync, and GitHub Pages static hosting.
