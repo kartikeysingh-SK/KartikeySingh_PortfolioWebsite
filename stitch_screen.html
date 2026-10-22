@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-low": "#1b1b1f",
+          "tertiary-fixed": "#e2e2e7",
+          "on-secondary-container": "#ccb68b",
+          "on-tertiary-container": "#4a4c50",
+          "on-secondary-fixed-variant": "#544523",
+          "surface-container-lowest": "#0d0e11",
+          "on-error": "#690005",
+          "on-surface-variant": "#d0c5b6",
+          "secondary-fixed-dim": "#dac498",
+          "on-surface": "#e3e2e6",
+          "inverse-on-surface": "#2f3034",
+          "on-background": "#e3e2e6",
+          "inverse-surface": "#e3e2e6",
+          "on-tertiary-fixed-variant": "#45474b",
+          "tertiary-fixed-dim": "#c6c6cb",
+          "surface-variant": "#343538",
+          "error": "#ffb4ab",
+          "primary-fixed-dim": "#e0c38b",
+          "surface-bright": "#38393c",
+          "primary-fixed": "#fedfa5",
+          "on-tertiary-fixed": "#1a1c20",
+          "outline-variant": "#4d463a",
+          "on-primary-container": "#5d491c",
+          "surface-container-highest": "#343538",
+          "inverse-primary": "#715b2d",
+          "on-secondary": "#3c2f0e",
+          "surface-dim": "#121316",
+          "on-secondary-fixed": "#251a00",
+          "secondary-container": "#574725",
+          "outline": "#998f82",
+          "on-primary-fixed": "#261900",
+          "tertiary": "#d8d8dd",
+          "surface-tint": "#e0c38b",
+          "background": "#121316",
+          "on-tertiary": "#2e3035",
+          "secondary": "#dac498",
+          "surface-container-high": "#292a2d",
+          "error-container": "#93000a",
+          "on-error-container": "#ffdad6",
+          "primary-container": "#d6b982",
+          "surface-container": "#1f1f23",
+          "on-primary": "#3f2e03",
+          "surface": "#121316",
+          "secondary-fixed": "#f8e0b2",
+          "primary": "#f3d59b",
+          "on-primary-fixed-variant": "#584418",
+          "tertiary-container": "#bcbcc2"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "3rem",
+          "space-xs": "0.25rem",
+          "margin": "3rem",
+          "space-sm": "0.75rem",
+          "space-md": "1.5rem",
+          "space-xl": "6rem",
+          "gutter": "2rem"
+        },
+        "fontFamily": {
+          "headline-md": [
+            "DM Sans"
+          ],
+          "label-md": [
+            "Manrope"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "headline-xl": [
+            "DM Sans"
+          ],
+          "headline-sm": [
+            "DM Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "DM Sans"
+          ],
+          "label-sm": [
+            "Manrope"
+          ]
+        },
+        "fontSize": {
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "30px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.1em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      }
+    }
+}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl"><div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between"><a class="text-headline-sm font-headline-sm font-bold tracking-tight text-primary" data-path="home" href="#">KS</a><nav class="hidden md:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="transition-colors px-space-sm py-space-xs bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="home" href="#">Home</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="about" href="#">About</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="skills" href="#">Skills</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="projects" href="#">Projects</a><a class="text-body-md text-on-surface-variant hover:text-on-surface transition-colors px-space-sm py-space-xs" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><button aria-label="Toggle theme" class="p-space-xs rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs bg-primary-container text-on-primary-container text-label-md rounded-lg font-label-md uppercase tracking-wider hover:opacity-90 transition-opacity" data-path="resume" href="#">Resume</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full text-on-surface bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- HERO SECTION -->
+<section class="relative min-h-[921px] flex items-center pt-space-xl pb-space-lg overflow-hidden bg-gradient-to-b from-surface-dim to-surface">
+<!-- Background decorative glow -->
+<div class="absolute top-1/4 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-10 left-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter w-full grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+<!-- Left Hero Copy -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-high text-primary text-label-sm tracking-wider uppercase mb-space-md border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>PERSONAL PORTFOLIO • IT4048</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-xs">
+          Kartikey Singh
+        </h1>
+<p class="font-headline-md text-headline-md text-primary font-medium tracking-wide uppercase mb-space-md">
+          BUILDING WHAT COMES NEXT.
+        </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-lg leading-relaxed">
+          IT student and developer bridging the gap between meticulous design craftsmanship and robust, version-controlled engineering under course <strong class="text-on-surface font-semibold">IT4048</strong>.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="px-space-md py-space-sm bg-primary-container text-on-primary-container text-label-md rounded-lg font-label-md uppercase tracking-wider hover:opacity-90 transition-all shadow-sm" href="#projects">
+            Explore Projects
+          </a>
+<a class="px-space-md py-space-sm bg-surface-container-high text-on-surface text-label-md rounded-lg font-label-md uppercase tracking-wider hover:bg-surface-bright transition-all border border-outline-variant/40" href="#contact">
+            Contact Me
+          </a>
+</div>
+<!-- Quick Stats Row -->
+<div class="grid grid-cols-3 gap-space-md mt-space-xl pt-space-md border-t border-outline-variant/20 w-full">
+<div>
+<span class="block font-headline-md text-headline-md text-primary font-bold">100%</span>
+<span class="font-label-sm text-on-surface-variant uppercase">Git Integrated</span>
+</div>
+<div>
+<span class="block font-headline-md text-headline-md text-primary font-bold">3+</span>
+<span class="font-label-sm text-on-surface-variant uppercase">Core Projects</span>
+</div>
+<div>
+<span class="block font-headline-md text-headline-md text-primary font-bold">IT4048</span>
+<span class="font-label-sm text-on-surface-variant uppercase">Version Control</span>
+</div>
+</div>
+</div>
+<!-- Right Interactive Git Terminal Card -->
+<div class="lg:col-span-5 w-full">
+<div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/30 shadow-2xl relative overflow-hidden">
+<!-- Window Header -->
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error/80"></div>
+<div class="w-3 h-3 rounded-full bg-primary/80"></div>
+<div class="w-3 h-3 rounded-full bg-secondary/80"></div>
+</div>
+<span class="font-body-sm text-on-surface-variant font-mono">git-status@kartikey-pc</span>
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+</div>
+<!-- Terminal Content -->
+<div class="font-mono text-body-sm space-y-space-xs text-on-surface-variant">
+<p class="text-primary">$ git status</p>
+<p class="text-on-surface">On branch main</p>
+<p class="text-on-surface">Your branch is up to date with 'origin/main'.</p>
+<div class="py-2">
+<p class="text-primary">$ git log --oneline -n 3</p>
+<p class="text-tertiary-fixed"><span class="text-primary">c4f82a1</span> feat: implement real-time routing engine</p>
+<p class="text-tertiary-fixed"><span class="text-primary">91e3b04</span> docs: update IT4048 assignment checkpoints</p>
+<p class="text-tertiary-fixed"><span class="text-primary">2a71d8f</span> init: initial commit for portfolio architecture</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+                Stable Build Active
+              </span>
+<span class="text-on-surface-variant text-xs">v2.4.0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT SECTION -->
+<section class="py-space-xl bg-surface-container-lowest" id="about">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
+<div>
+<span class="text-label-md text-primary font-label-md uppercase tracking-widest block mb-space-xs">01 / Profile Overview</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Curious by nature. Building by practice.</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Combining rigorous academic discipline in modern version control workflows with creative frontend engineering.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Editorial Image Placeholder -->
+<div class="lg:col-span-5">
+<div class="relative rounded-xl overflow-hidden shadow-xl aspect-[4/5] bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A professional studio portrait of a young male IT student developer working in a minimalist dark-themed workspace with ambient warm amber lighting and dual glowing monitors displaying clean code and git branches." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCY79PpbkNv8UwbistjeqzoqtvP-QDFHmf7V9SCApprZE3x-3--jLcXJZC0BvDzTpeErxlqzuPjxsKbXZ-F7L7XLFSYKzROND01nZAEvrQiWN9j-Xy2tJpwmRQ8LSt3YYAiqUOrkzHXg264mlvXtRfhbpQUtpA5fNIJnC54Bnm75HO54IpwRbVu7jite1n4m0MMHp5XWqudxHPkFo41a9IWuvI4HNOExwCh0258GY0F64ElDQPM6G8a')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-space-md left-space-md right-space-md p-space-md bg-surface/80 backdrop-blur-md rounded-lg border border-outline-variant/20">
+<span class="font-label-sm text-primary uppercase block mb-1">Enrollment Verification</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Kartikey Singh</p>
+<p class="font-body-sm text-on-surface-variant">ID: 202503103510392 | IT4048</p>
+</div>
+</div>
+</div>
+<!-- Descriptive Copy & Details Card -->
+<div class="lg:col-span-7 space-y-space-md">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            As an Information Technology undergraduate, my academic focus centers on systematic software evolution, branching strategies, and collaborative development paradigms under <strong class="text-primary">IT4048 - Version Control with Git and GitHub</strong>.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            I believe that great software is forged at the intersection of aesthetic discipline and immaculate code history. Every repository I manage is structured with clear commit semantics, atomic feature branches, and rigorous pull request reviews.
+          </p>
+<!-- Verifiable Student Details Card -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[24px] mb-space-xs">badge</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Student Credentials</h3>
+<p class="font-body-sm text-on-surface-variant">Name: Kartikey Singh<br/>Enrollment: 202503103510392</p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[24px] mb-space-xs">menu_book</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Course Focus</h3>
+<p class="font-body-sm text-on-surface-variant">IT4048 - Version Control with Git and GitHub</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SKILLS & CAPABILITIES SECTION -->
+<section class="py-space-xl bg-surface" id="skills">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-label-md text-primary font-label-md uppercase tracking-widest block mb-space-xs">02 / Competencies</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-sm">Skills &amp; Capabilities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          An overview of technical proficiencies cultivated through academic projects and independent development.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Card 1: Frontend -->
+<div class="bg-surface-container p-space-lg rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Frontend Engineering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Crafting responsive, accessible, and high-performance user interfaces using modern web standards.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">HTML5</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">CSS3</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">JavaScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">Tailwind</span>
+</div>
+</div>
+<!-- Card 2: Tools & Version Control -->
+<div class="bg-surface-container p-space-lg rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">qr_code_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Version Control</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Mastery over Git workflows, branching strategies, merge conflict resolution, and GitHub collaboration.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">Git</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">GitHub</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">VS Code</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">CLI Workflows</span>
+</div>
+</div>
+<!-- Card 3: Core Competencies -->
+<div class="bg-surface-container p-space-lg rounded-xl border border-outline-variant/20 hover:border-primary/40 transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Core Competencies</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Translating complex system requirements into clean architectures with exceptional attention to detail.
+          </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">UI / UX</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">Responsive Design</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm uppercase border border-outline-variant/30">Problem Solving</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED PROJECTS SECTION -->
+<section class="py-space-xl bg-surface-container-lowest" id="projects">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
+<div>
+<span class="text-label-md text-primary font-label-md uppercase tracking-widest block mb-space-xs">03 / Selected Works</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Projects</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Rigorous engineering projects tracked and version-controlled under course requirements.
+        </p>
+</div>
+<div class="space-y-space-xl">
+<!-- Project 01: Personal Portfolio Website -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center bg-surface-container p-space-lg rounded-xl border border-outline-variant/20">
+<div class="lg:col-span-6 order-2 lg:order-1 space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-primary uppercase font-bold">Project 01</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-on-surface-variant uppercase">HTML / CSS / JS</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Personal Portfolio Website</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              An editorial dark-themed developer portfolio built for IT4048. Features meticulous typography hierarchy, responsive layout patterns, and integrated Git status displays adhering to luxury design standards.
+            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm uppercase">Git Main Branch</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm uppercase">Tailwind CSS</span>
+</div>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-primary font-label-md uppercase tracking-wider hover:opacity-80 transition-opacity" href="#">
+<span>View Repository</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 order-1 lg:order-2">
+<div class="rounded-lg overflow-hidden shadow-lg aspect-video bg-surface-container-high relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A sleek minimalist web developer portfolio preview screen showing dark obsidian background with champagne gold accents, typography headers, and structured project cards." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZ0i9nJYI1D5Mv9JByIKBIAM0jB08oo00rr0oo4VDbWSq587XBzyI448ltyKUuQi710s_LZmnG8UnVwpdd_Uuez-I3djDVdsEY7uLjlO-uscRbE8tvrYpxPXqBybZO87d8lnQ6MtzfndJIYinVkMzj8ZVBEoHu7IieujW3mWoSjzNvVAiFTNgTIz1ggfZ7u7baoqjC8cMTdE5TizzmrRBGJro6YkEX3kAJULcTQ43UTTgNNniVpbEb')"></div>
+</div>
+</div>
+</div>
+<!-- Project 02: Parcel Transport Management System (PTMS) + Spotlight Case Study -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center bg-surface-container p-space-lg rounded-xl border border-outline-variant/20">
+<div class="lg:col-span-6 order-2 lg:order-1 space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-primary uppercase font-bold">Project 02 • Spotlight Case Study</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-on-surface-variant uppercase">Logistics &amp; Workflow</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Parcel Transport Management System (PTMS)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              An advanced logistics workflow tracker designed to manage dispatch queues, real-time status updates, and delivery routing logs with robust version control branching.
+            </p>
+<!-- Interactive Git Branch Tree View -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-outline-variant/30 font-mono text-body-sm space-y-1">
+<p class="text-primary text-xs uppercase tracking-wider mb-2">Interactive Git Branch Tree: PTMS</p>
+<p class="text-on-surface">* <span class="text-primary">feature/dispatch-routing</span> (HEAD)</p>
+<p class="text-on-surface-variant">|\</p>
+<p class="text-on-surface">| * <span class="text-primary">fix/tracking-status-bug</span></p>
+<p class="text-on-surface-variant">|/</p>
+<p class="text-on-surface">* <span class="text-secondary">main</span> (v1.2 stable release)</p>
+</div>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-primary font-label-md uppercase tracking-wider hover:opacity-80 transition-opacity" href="#">
+<span>View Source Code</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 order-1 lg:order-2">
+<div class="rounded-lg overflow-hidden shadow-lg aspect-video bg-surface-container-high relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A modern software dashboard interface mockup displaying logistics transport management graphs, active parcel delivery timelines, and workflow dispatch status metrics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYuJLt07Nb_BvUm_-THTelMt8Y1sMOetBJnSPTXEl5YlN_QJih0GltDQ1Zw_mxIHX37AIHzmflNw1TBrmRooDgrglJpRGNKwgI4lIAwoI_GxVTT0xTrgYffNVqKxW52mF243IRSxgu7wqeqQS9ofVrQE3REvxmaOVY87nXlpr7I1t15CzuRahV1ua_t1qYRkh6-ftg7Lb2VetmUj_DiAo4vlgX7Zb02uBYRu2Yiabi28xxTmY463Pl')"></div>
+</div>
+</div>
+</div>
+<!-- Project 03: Real-Time Resource Allocation Engine (RTRAE) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center bg-surface-container p-space-lg rounded-xl border border-outline-variant/20">
+<div class="lg:col-span-6 order-2 lg:order-1 space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-primary uppercase font-bold">Project 03</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-on-surface-variant uppercase">Algorithm &amp; Scheduling</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Real-Time Resource Allocation Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              A high-performance algorithmic scheduling engine built to optimize computational workload distribution with automated regression testing and clean commit history.
+            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm uppercase">Algorithms</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant text-label-sm uppercase">Git CI/CD Pipeline</span>
+</div>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-2 text-primary font-label-md uppercase tracking-wider hover:opacity-80 transition-opacity" href="#">
+<span>View Repository</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 order-1 lg:order-2">
+<div class="rounded-lg overflow-hidden shadow-lg aspect-video bg-surface-container-high relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A technical visualization interface showing system resource allocation graphs, cpu load distribution metrics, and real-time scheduling algorithm telemetry." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBB36bLKRNqSpQWvAEcba_hvoZZjZX_fddbcQAImebJ16lSQMgeGAXDB9J1GdZGPoKSW8U6_lyqM2gtThltIk7COlKhMGf96WTJidCUvMiUX1pWH-dMiNeEMFTvE2ttHv2sag4fX-du0062axpUzwxwI6Zm8GTN2B_P2UlzOd2nwQeijCQrhC-y4J0X8tna2zrAxS9pBAwwtxA0vSViyQi2D9x0eGrHr8sy5VqFIJkY6bkJ3sgFaAg4')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT SECTION -->
+<section class="py-space-xl bg-surface relative overflow-hidden" id="contact">
+<div class="absolute bottom-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-gutter relative z-10">
+<div class="text-center mb-space-lg">
+<span class="text-label-md text-primary font-label-md uppercase tracking-widest block mb-space-xs">04 / Get In Touch</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs">HAVE A GOOD IDEA? LET'S BUILD IT.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Reach out for project collaborations, academic discussions on Git workflows, or technical inquiries.
+        </p>
+</div>
+<div class="bg-surface-container p-space-lg rounded-xl border border-outline-variant/30 shadow-xl">
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Message sent successfully! Thank you for reaching out.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Your Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/40 rounded-lg px-space-md py-3 text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Your Email</label>
+<input class="w-full bg-surface-container-low border border-outline-variant/40 rounded-lg px-space-md py-3 text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Message</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant/40 rounded-lg px-space-md py-3 text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="Tell me about your project or inquiry..." required="" rows="4"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-body-sm" href="https://github.com" target="_blank">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>GitHub Profile</span>
+</a>
+<button class="w-full sm:w-auto px-space-lg py-space-sm bg-primary-container text-on-primary-container text-label-md rounded-lg font-label-md uppercase tracking-wider hover:opacity-90 transition-opacity shadow-sm" type="submit">
+              Send Message
+            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- BACK TO TOP BAR -->
+<div class="bg-surface-container-low py-space-md border-t border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-gutter flex items-center justify-between">
+<span class="font-body-sm text-on-surface-variant">Kartikey Singh • IT4048 Portfolio</span>
+<button class="flex items-center gap-1 text-primary hover:opacity-80 transition-opacity font-label-sm uppercase tracking-wider" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+<span>Back to Top</span>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-lg"><div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant text-body-sm"><div class="flex flex-col items-center md:items-start"><span class="text-headline-sm font-headline-sm text-primary font-bold">Kartikey Singh</span><span class="mt-space-xs">IT4048 - Version Control with Git and GitHub</span></div><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">GitHub</a><a class="hover:text-primary transition-colors" href="#">LinkedIn</a><a class="hover:text-primary transition-colors" href="#">Email</a></div><div>© 2024 Kartikey Singh. All rights reserved.</div></div></footer></body></html>

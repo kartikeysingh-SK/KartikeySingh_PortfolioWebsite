@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kartikey Singh - Résumé (With Photograph)</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 18mm 18mm 18mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.5;
+      font-size: 10.5pt;
+      background: #ffffff;
+    }
+    .header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .name-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    h1 {
+      font-size: 22pt;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-size: 11pt;
+      color: #2563eb;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 9.5pt;
+      color: #475569;
+      margin-top: 8px;
+    }
+    .contact-bar span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .photo-wrapper {
+      flex-shrink: 0;
+      width: 85px;
+      height: 105px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1.5px solid #cbd5e1;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      background-color: #f1f5f9;
+    }
+    .photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .section {
+      margin-bottom: 14px;
+    }
+    h2 {
+      font-size: 12pt;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #1e3a8a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #0f172a;
+    }
+    .item-sub {
+      display: flex;
+      justify-content: space-between;
+      font-style: italic;
+      color: #475569;
+      font-size: 9.5pt;
+      margin-bottom: 4px;
+    }
+    ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+    li {
+      margin-bottom: 3px;
+      color: #334155;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      row-gap: 6px;
+      font-size: 9.5pt;
+    }
+    .skill-cat {
+      font-weight: bold;
+      color: #0f172a;
+    }
+    .notice-box {
+      background: #f1f5f9;
+      border-left: 4px solid #3b82f6;
+      padding: 6px 10px;
+      font-size: 8.5pt;
+      color: #475569;
+      margin-bottom: 14px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div style="flex: 1;">
+      <div class="name-title">
+        <h1>KARTIKEY SINGH</h1>
+        <span class="subtitle">Computer Science &amp; Engineering Student</span>
+      </div>
+      <div class="contact-bar">
+        <span><strong>Enrollment:</strong> 202503103510392</span>
+        <span><strong>Email:</strong> 25amtics392@gmail.com</span>
+        <span><strong>Location:</strong> Surat, Gujarat, India</span>
+        <span><strong>GitHub:</strong> github.com/kartikeysingh-SK</span>
+      </div>
+    </div>
+    <div class="photo-wrapper">
+      <img src="resume_photo_natural_enhancement.jpg" alt="Kartikey Singh">
+    </div>
+  </div>
+
+  <div class="notice-box">
+    <strong>Academic Portfolio Template:</strong> Prepared for IT4048 (Version Control with Git and GitHub) academic submission. All information corresponds to verified student details, coursework, and local project implementations.
+  </div>
+
+  <!-- Education Section -->
+  <div class="section">
+    <h2>Education</h2>
+    <div class="item">
+      <div class="item-header">
+        <span>Asha M. Tarsadia Institute of Computer Science and Technology (AMTICS)</span>
+        <span>Surat, Gujarat</span>
+      </div>
+      <div class="item-sub">
+        <span>Bachelor of Technology in Computer Science and Engineering</span>
+        <span>Pursuing</span>
+      </div>
+      <ul>
+        <li>Coursework: Version Control with Git &amp; GitHub (IT4048), Web Development Fundamentals, Database Management Systems, Data Structures &amp; Algorithms.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Technical Skills Section -->
+  <div class="section">
+    <h2>Technical Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-cat">Web Technologies:</div>
+      <div>HTML5 (Semantic), CSS3 (Flexbox/Grid/Design Tokens), JavaScript (ES6+), Responsive Design</div>
+
+      <div class="skill-cat">Backend &amp; DB:</div>
+      <div>PHP, MySQL, Node.js &amp; Express.js (Basics), RESTful API Integration</div>
+
+      <div class="skill-cat">Tools &amp; VCS:</div>
+      <div>Git, GitHub, GitHub Pages, Vercel Static Hosting, VS Code</div>
+
+      <div class="skill-cat">Methodologies:</div>
+      <div>Prototyping Model, Requirement Analysis, Component Modularization, Semantic Commit Logging</div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="section">
+    <h2>Technical &amp; Academic Projects</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <span>Real-Time Resource Allocation Engine (RTRAE)</span>
+        <span>PHP, MySQL, JavaScript, Vercel</span>
+      </div>
+      <div class="item-sub">
+        <span>Full-Stack Resource Scheduling Application</span>
+        <span>Repository: github.com/kartikeysingh-SK/resource-allocation</span>
+      </div>
+      <ul>
+        <li>Architected an automated scheduling system with conflict detection and dynamic resource reservation logic.</li>
+        <li>Implemented administrative audit tracking, role-based dashboards, and responsive analytics.</li>
+        <li>Configured cloud database connectivity and deployment routines for continuous availability.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span>Smart Grocery Shopkeeper Management System</span>
+        <span>Node.js, Express, JavaScript, CSS3</span>
+      </div>
+      <div class="item-sub">
+        <span>Local Retail Udhar / Credit Management System</span>
+        <span>Surat Retail Use Case</span>
+      </div>
+      <ul>
+        <li>Digitized manual credit bookkeeping into an automated ledger tracking customer transactions and net balances.</li>
+        <li>Built an instant digital udhar statement generator for customer invoice sharing and print reports.</li>
+        <li>Designed using the Prototyping software engineering model with active client requirements analysis.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <span>Personal Portfolio Website (IT4048 Mini-Project)</span>
+        <span>HTML5, CSS3, JavaScript, Git &amp; GitHub Pages</span>
+      </div>
+      <div class="item-sub">
+        <span>Academic Portfolio &amp; CI/CD Showcase</span>
+        <span>Repository: github.com/kartikeysingh-SK/KartikeySingh_PortfolioWebsite</span>
+      </div>
+      <ul>
+        <li>Engineered a responsive personal portfolio featuring custom CSS tokens, accessible light/dark theming, and zero bloated external libraries.</li>
+        <li>Integrated interactive project filtering, mailto fallback handlers, and résumé PDF downloads.</li>
+        <li>Implemented a complete Git version control workflow with semantic commits and GitHub Pages static hosting.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Academic Highlights & Soft Skills -->
+  <div class="section">
+    <h2>Engineering Practices &amp; Interpersonal Skills</h2>
+    <ul>
+      <li><strong>Version Control Discipline:</strong> Practicing structured Git branches, conventional commit messages, and automated static publishing.</li>
+      <li><strong>Problem Decomposition:</strong> Breaking down software requirements through use case modeling, activity workflows, and system architecture.</li>
+      <li><strong>Continuous Learning:</strong> Proactively exploring new frameworks, web standards, and developer productivity tools.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
